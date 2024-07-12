@@ -6,11 +6,11 @@ public interface CalculatorService {
 
     String vidjaOlCalGreet();
 
-    String calculatorAdd(float summand1, float summand2);
+    String calculatorAdd(Float summand1, Float summand2);
 
-    String calculatorDifference(float diminutive, float deductible);
+    String calculatorDifference(Float diminutive, Float deductible);
 
-    String calculatorMultiply(float multipliable, float multiplier);
+    String calculatorMultiply(Float multipliable, Float multiplier);
 
-    String calculatorDivide(float divisible, float divider);
+    String calculatorDivide(Float divisible, Float divider);
 }

@@ -13,27 +13,42 @@ public class CalculatorServiceImpl implements CalculatorService {
         return "Добро пожаловать в калькулятор";
     }
 
-    public String calculatorAdd(float summand1, float summand2) {
-        float amount = summand1 + summand2;
-        return summand1 + " + " + summand2 + " = " + amount;
+    public String calculatorAdd(Float summand1, Float summand2) {
+        if (summand1 == null || summand2 == null) {
+            return "Одна или несколько операнд не введена, нужно ввести переменную.";
+        } else {
+            float amount = summand1 + summand2;
+            return summand1 + " + " + summand2 + " = " + amount;
+        }
     }
 
-    public String calculatorDifference(float diminutive, float deductible) {
-        float difference = diminutive - deductible;
-        return diminutive + " - " + deductible + " = " + difference;
+    public String calculatorDifference(Float diminutive, Float deductible) {
+        if (diminutive == null || deductible == null) {
+            return "Одна или несколько операнд не введена, нужно ввести переменную.";
+        } else {
+            float difference = diminutive - deductible;
+            return diminutive + " - " + deductible + " = " + difference;
+        }
     }
 
-    public String calculatorMultiply(float multipliable, float multiplier) {
-        float multiply = multipliable * multiplier;
-        return multipliable + " * " + multiplier + " = " + multiply;
+    public String calculatorMultiply(Float multipliable, Float multiplier) {
+        if (multipliable == null || multiplier == null) {
+            return "Одна или несколько операнд не введена, нужно ввести переменную.";
+        } else {
+            float multiply = multipliable * multiplier;
+            return multipliable + " * " + multiplier + " = " + multiply;
+        }
     }
 
-    public String calculatorDivide(float divisible, float divider) {
-        if (divider == 0.0) {
+    public String calculatorDivide(Float divisible, Float divider) {
+        if (divisible == null || divider == null) {
+            return "Одна или несколько операнд не введена, нужно ввести переменную.";
+        } else if (divider == 0.0) {
             return "На ноль делить нельзя - измените делитель";
         } else {
             float divide = divisible / divider;
             return divisible + " / " + divider + " = " + divide;
         }
+
     }
 }

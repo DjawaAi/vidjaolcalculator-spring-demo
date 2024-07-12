@@ -20,22 +20,22 @@ public class VidjaOlCalController {
     }
 
     @GetMapping(path = "/plus")
-    public String calculatorAdd(@RequestParam("num1") float summand1, @RequestParam("num2") float summand2) {
+    public String calculatorAdd(@RequestParam(value = "num1", required = false) Float summand1, @RequestParam(value = "num2", required = false) Float summand2) {
         return calculatorService.calculatorAdd(summand1, summand2);
     }
 
     @GetMapping(path = "/minus")
-    public String calculatorDifference(@RequestParam("num1") float diminutive, @RequestParam("num2") float deductible) {
+    public String calculatorDifference(@RequestParam(value = "num1", required = false) Float diminutive, @RequestParam(value = "num2", required = false) Float deductible) {
         return calculatorService.calculatorDifference(diminutive, deductible);
     }
 
     @GetMapping(path = "/multiply")
-    public String calculatorMultiply(@RequestParam("num1") float multipliable, @RequestParam("num2") float multiplier) {
+    public String calculatorMultiply(@RequestParam(value = "num1", required = false) Float multipliable, @RequestParam(value = "num2", required = false) Float multiplier) {
         return calculatorService.calculatorMultiply(multipliable, multiplier);
     }
 
     @GetMapping(path = "/divide")
-    public String calculatorDivide(@RequestParam("num1") float divisible, @RequestParam("num2") float divider) {
+    public String calculatorDivide(@RequestParam(value = "num1", required = false) Float divisible, @RequestParam(value = "num2", required = false) Float divider) {
         return calculatorService.calculatorDivide(divisible, divider);
     }
 
